@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>法文單字微學習 - Renverser</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // 設定 Tailwind 使用 class 模式來切換深色主題
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Poppins:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Poppins', 'Noto Sans TC', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 min-h-screen text-slate-800 dark:text-slate-200 antialiased py-12 px-4 transition-colors duration-300">
+
+    <!-- 深淺色切換按鈕 -->
+    <button onclick="toggleTheme()" class="fixed top-6 right-6 p-3 rounded-full bg-white dark:bg-slate-800 shadow-md border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all duration-300 z-50 flex items-center justify-center" title="切換深淺色">
+        <span id="theme-icon" class="text-xl">☀️</span>
+    </button>
+
+    <div class="max-w-4xl mx-auto">
+        
+        <header class="text-center mb-12">
+            <span class="inline-block bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded-full mb-3 transition-colors">
+                Verbe Transitif Direct (及物動詞)
+            </span>
+            
+            <!-- 標題與發音按鈕的容器 -->
+            <div class="flex items-center justify-center gap-4 mb-4">
+                <h1 class="text-5xl font-bold text-slate-900 dark:text-slate-100 tracking-tight transition-colors">
+                    Renverser
+                </h1>
+                <!-- 發音按鈕 -->
+                <button onclick="speakWord('Renverser')" class="p-2.5 rounded-full bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow hover:bg-indigo-50 dark:hover:bg-indigo-900/50 hover:scale-110 active:scale-95 transition-all duration-200" title="聆聽發音">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+                    </svg>
+                </button>
+            </div>
+
+            <p class="text-lg text-slate-600 dark:text-slate-400 max-w-xl mx-auto leading-relaxed transition-colors">
+                本身是直接及物動詞，受詞前不需要加介系詞。但如果要表達<span class="font-semibold text-indigo-600 dark:text-indigo-400">「打翻在某個地方」</span>或<span class="font-semibold text-indigo-600 dark:text-indigo-400">「把 A 倒進 B」</span>，則需要搭配空間介係詞。
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            
+            <div class="group bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1.5 bg-amber-500"></div>
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/30 px-2.5 py-1 rounded-md transition-colors">結構一</span>
+                    <span class="text-slate-400 group-hover:text-amber-500 transition-colors duration-300 text-sm">🛑 表面 (On)</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2 transition-colors">
+                    Renverser <span class="text-sm font-normal text-slate-400">+ Qch</span> <span class="text-amber-600 dark:text-amber-500 font-extrabold underline decoration-2 underline-offset-4">sur</span> <span class="text-sm font-normal text-slate-400">+ 地點</span>
+                </h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6 transition-colors">
+                    當液體或物體潑灑在某個表面上時，大腦會將 <span class="font-semibold text-slate-700 dark:text-slate-300">sur</span> 視為空間的終點。
+                </p>
+                
+                <div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-4 border border-slate-100 dark:border-slate-700 transition-colors">
+                    <p class="text-[15px] font-medium text-slate-900 dark:text-slate-200 italic mb-2 leading-snug transition-colors">
+                        Il a renversé son café <span class="text-amber-600 dark:text-amber-500 font-bold">sur</span> son clavier.
+                    </p>
+                    <button onclick="toggleTranslation(this)" class="text-xs text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 font-medium transition-colors flex items-center gap-1">
+                        <span>👁️ 顯示翻譯</span>
+                    </button>
+                    <p class="hidden text-sm text-slate-600 dark:text-slate-400 mt-2 pt-2 border-t border-dashed border-slate-200 dark:border-slate-600 transition-colors">
+                        他把咖啡打翻在鍵盤上。
+                    </p>
+                </div>
+            </div>
+
+            <div class="group bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1.5 bg-sky-500"></div>
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-900/30 px-2.5 py-1 rounded-md transition-colors">結構二</span>
+                    <span class="text-slate-400 group-hover:text-sky-500 transition-colors duration-300 text-sm">📦 內部 (In)</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2 transition-colors">
+                    Renverser <span class="text-sm font-normal text-slate-400">+ Qch</span> <span class="text-sky-600 dark:text-sky-500 font-extrabold underline decoration-2 underline-offset-4">dans</span> <span class="text-sm font-normal text-slate-400">+ 容器</span>
+                </h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6 transition-colors">
+                    當物體是跌入或傾倒進一個封閉空間或範圍時，使用 <span class="font-semibold text-slate-700 dark:text-slate-300">dans</span>。
+                </p>
+                
+                <div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-4 border border-slate-100 dark:border-slate-700 transition-colors">
+                    <p class="text-[15px] font-medium text-slate-900 dark:text-slate-200 italic mb-2 leading-snug transition-colors">
+                        Le vent a renversé la clôture <span class="text-sky-600 dark:text-sky-500 font-bold">dans</span> le jardin.
+                    </p>
+                    <button onclick="toggleTranslation(this)" class="text-xs text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 font-medium transition-colors flex items-center gap-1">
+                        <span>👁️ 顯示翻譯</span>
+                    </button>
+                    <p class="hidden text-sm text-slate-600 dark:text-slate-400 mt-2 pt-2 border-t border-dashed border-slate-200 dark:border-slate-600 transition-colors">
+                        風把圍欄吹倒在花園裡。
+                    </p>
+                </div>
+            </div>
+
+            <div class="group bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1.5 bg-purple-500"></div>
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/30 px-2.5 py-1 rounded-md transition-colors">結構三</span>
+                    <span class="text-slate-400 group-hover:text-purple-500 transition-colors duration-300 text-sm">🔄 反身 (Reflexive)</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2 transition-colors">
+                    <span class="text-purple-600 dark:text-purple-500 font-extrabold">Se renverser</span> <span class="text-sm font-normal text-slate-400">dans / sur...</span>
+                </h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6 transition-colors">
+                    代動詞用法（自己倒下/翻車）。當主詞自己翻覆時使用，後面常搭配 dans 或 sur。
+                </p>
+                
+                <div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-4 border border-slate-100 dark:border-slate-700 transition-colors">
+                    <p class="text-[15px] font-medium text-slate-900 dark:text-slate-200 italic mb-2 leading-snug transition-colors">
+                        La voiture s'est renversée <span class="text-purple-600 dark:text-purple-500 font-bold">dans</span> le fossé.
+                    </p>
+                    <button onclick="toggleTranslation(this)" class="text-xs text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 font-medium transition-colors flex items-center gap-1">
+                        <span>👁️ 顯示翻譯</span>
+                    </button>
+                    <p class="hidden text-sm text-slate-600 dark:text-slate-400 mt-2 pt-2 border-t border-dashed border-slate-200 dark:border-slate-600 transition-colors">
+                        汽車翻覆在水溝裡。
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-slate-700 transition-colors">
+            <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2 flex items-center gap-2 transition-colors">
+                <span>⚡</span> 隨堂小測驗 (Quiz)
+            </h2>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mb-6 transition-colors">根據情境，選擇最適合的介系詞填空：</p>
+            
+            <div class="space-y-6">
+                <div>
+                    <p class="text-base font-medium text-slate-800 dark:text-slate-200 mb-3 transition-colors">
+                        Q1. J'ai renversé de l'eau ______ mon livre de français. <span class="text-sm font-normal text-slate-400">(我把水打翻在我的法文課本上。)</span>
+                    </p>
+                    <div class="flex gap-3">
+                        <button onclick="checkAnswer(this, 'sur', true)" class="px-4 py-2 border border-slate-200 dark:border-slate-600 rounded-xl text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 dark:text-slate-300 transition-colors">sur</button>
+                        <button onclick="checkAnswer(this, 'dans', false)" class="px-4 py-2 border border-slate-200 dark:border-slate-600 rounded-xl text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 dark:text-slate-300 transition-colors">dans</button>
+                    </div>
+                    <p class="quiz-feedback hidden text-sm mt-2 font-medium"></p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        // --- 發音功能 ---
+        function speakWord(word) {
+            if ('speechSynthesis' in window) {
+                // 取消當前正在播放的語音（避免連按重疊）
+                window.speechSynthesis.cancel();
+                
+                const utterance = new SpeechSynthesisUtterance(word);
+                utterance.lang = 'fr-FR'; // 設定為法文
+                utterance.rate = 0.9;     // 稍微放慢語速，方便學習
+                
+                window.speechSynthesis.speak(utterance);
+            } else {
+                alert('很抱歉，您的瀏覽器不支援語音發音功能！建議使用 Chrome 或 Safari。');
+            }
+        }
+
+        // --- 深淺色切換功能 ---
+        function toggleTheme() {
+            const htmlEl = document.documentElement;
+            const themeIcon = document.getElementById('theme-icon');
+            
+            if (htmlEl.classList.contains('dark')) {
+                htmlEl.classList.remove('dark');
+                themeIcon.textContent = '🌙'; 
+            } else {
+                htmlEl.classList.add('dark');
+                themeIcon.textContent = '☀️'; 
+            }
+        }
+
+        // --- 隱藏/顯示翻譯功能 ---
+        function toggleTranslation(button) {
+            const translationElement = button.nextElementSibling;
+            const isHidden = translationElement.classList.contains('hidden');
+            
+            if (isHidden) {
+                translationElement.classList.remove('hidden');
+                button.innerHTML = '<span>🙈 隱藏翻譯</span>';
+            } else {
+                translationElement.classList.add('hidden');
+                button.innerHTML = '<span>👁️ 顯示翻譯</span>';
+            }
+        }
+
+        // --- 測驗檢查功能 ---
+        function checkAnswer(button, choice, isCorrect) {
+            const container = button.parentElement.parentElement;
+            const feedback = container.querySelector('.quiz-feedback');
+            const buttons = container.querySelectorAll('button');
+            
+            // 禁用該題目的所有按鈕
+            buttons.forEach(btn => btn.disabled = true);
+
+            feedback.classList.remove('hidden');
+            if (isCorrect) {
+                button.className = "px-4 py-2 bg-emerald-500 border border-emerald-500 rounded-xl text-sm font-medium text-white transition-colors";
+                feedback.innerHTML = "🎉 太棒了！答對了！因為課本表面是一個「平面」，所以用 sur。";
+                feedback.className = "quiz-feedback text-sm mt-2 font-medium text-emerald-600 dark:text-emerald-400";
+            } else {
+                button.className = "px-4 py-2 bg-rose-500 border border-rose-500 rounded-xl text-sm font-medium text-white transition-colors";
+                feedback.innerHTML = "❌ 再想想看，課本表面應該是用哪一個空間介系詞呢？";
+                feedback.className = "quiz-feedback text-sm mt-2 font-medium text-rose-600 dark:text-rose-400";
+                
+                // 把正確的那個按鈕也亮起來提示
+                buttons.forEach(btn => {
+                    if(btn.textContent === 'sur') {
+                        btn.className = "px-4 py-2 bg-emerald-100 dark:bg-emerald-900/40 border border-emerald-200 dark:border-emerald-800 rounded-xl text-sm font-medium text-emerald-700 dark:text-emerald-400 transition-colors";
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>
