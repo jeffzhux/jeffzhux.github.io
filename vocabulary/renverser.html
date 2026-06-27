@@ -49,7 +49,7 @@
             </div>
 
             <p class="text-lg text-slate-600 dark:text-slate-400 max-w-xl mx-auto leading-relaxed transition-colors">
-                本身是直接及物動詞，受詞前不需要加介系詞。但如果要表達<span class="font-semibold text-indigo-600 dark:text-indigo-400">「打翻在某個地方」</span>或<span class="font-semibold text-indigo-600 dark:text-indigo-400">「把 A 倒進 B」</span>，則需要搭配空間介係詞。
+                打翻...<span class="font-semibold text-indigo-600 dark:text-indigo-400">「打翻在某個地方」</span>或<span class="font-semibold text-indigo-600 dark:text-indigo-400">「把 A 倒進 B」</span>，則需要搭配空間介係詞。
             </p>
         </header>
 
@@ -62,7 +62,7 @@
                     <span class="text-slate-400 group-hover:text-amber-500 transition-colors duration-300 text-sm">🛑 表面 (On)</span>
                 </div>
                 <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2 transition-colors">
-                    Renverser <span class="text-sm font-normal text-slate-400">+ Qch</span> <span class="text-amber-600 dark:text-amber-500 font-extrabold underline decoration-2 underline-offset-4">sur</span> <span class="text-sm font-normal text-slate-400">+ 地點</span>
+                    Renverser <span class="text-sm font-normal text-slate-400">Qch</span> <span class="text-amber-600 dark:text-amber-500 font-extrabold underline decoration-2 underline-offset-4">sur</span> <span class="text-sm font-normal text-slate-400">地點</span>
                 </h3>
                 <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6 transition-colors">
                     當液體或物體潑灑在某個表面上時，大腦會將 <span class="font-semibold text-slate-700 dark:text-slate-300">sur</span> 視為空間的終點。
@@ -88,7 +88,7 @@
                     <span class="text-slate-400 group-hover:text-sky-500 transition-colors duration-300 text-sm">📦 內部 (In)</span>
                 </div>
                 <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2 transition-colors">
-                    Renverser <span class="text-sm font-normal text-slate-400">+ Qch</span> <span class="text-sky-600 dark:text-sky-500 font-extrabold underline decoration-2 underline-offset-4">dans</span> <span class="text-sm font-normal text-slate-400">+ 容器</span>
+                    Renverser <span class="text-sm font-normal text-slate-400">Qch</span> <span class="text-sky-600 dark:text-sky-500 font-extrabold underline decoration-2 underline-offset-4">dans</span> <span class="text-sm font-normal text-slate-400">容器</span>
                 </h3>
                 <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6 transition-colors">
                     當物體是跌入或傾倒進一個封閉空間或範圍時，使用 <span class="font-semibold text-slate-700 dark:text-slate-300">dans</span>。
@@ -117,7 +117,7 @@
                     <span class="text-purple-600 dark:text-purple-500 font-extrabold">Se renverser</span> <span class="text-sm font-normal text-slate-400">dans / sur...</span>
                 </h3>
                 <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6 transition-colors">
-                    代動詞用法（自己倒下/翻車）。當主詞自己翻覆時使用，後面常搭配 dans 或 sur。
+                    自己倒下/翻車，後面常搭配 dans 或 sur。
                 </p>
                 
                 <div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-4 border border-slate-100 dark:border-slate-700 transition-colors">
@@ -135,7 +135,7 @@
 
         </div>
 
-        <section class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-slate-700 transition-colors">
+        <section class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-slate-700 transition-colors mb-6">
             <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2 flex items-center gap-2 transition-colors">
                 <span>⚡</span> 隨堂小測驗 (Quiz)
             </h2>
@@ -147,17 +147,61 @@
                         Q1. J'ai renversé de l'eau ______ mon livre de français. <span class="text-sm font-normal text-slate-400">(我把水打翻在我的法文課本上。)</span>
                     </p>
                     <div class="flex gap-3">
-                        <button onclick="checkAnswer(this, 'sur', true)" class="px-4 py-2 border border-slate-200 dark:border-slate-600 rounded-xl text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 dark:text-slate-300 transition-colors">sur</button>
-                        <button onclick="checkAnswer(this, 'dans', false)" class="px-4 py-2 border border-slate-200 dark:border-slate-600 rounded-xl text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 dark:text-slate-300 transition-colors">dans</button>
+                        <button onclick="checkAnswer(this)" data-correct="true" class="px-4 py-2 border border-slate-200 dark:border-slate-600 rounded-xl text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 dark:text-slate-300 transition-colors">sur</button>
+                        <button onclick="checkAnswer(this)" data-correct="false" class="px-4 py-2 border border-slate-200 dark:border-slate-600 rounded-xl text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 dark:text-slate-300 transition-colors">dans</button>
                     </div>
                     <p class="quiz-feedback hidden text-sm mt-2 font-medium"></p>
                 </div>
             </div>
         </section>
-
+        <!-- 新增：中翻法挑戰區塊 -->
+        <section class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-slate-700 transition-colors">
+            <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2 flex items-center gap-2 transition-colors">
+                <span>✍️</span> 中翻法造句練習 (Traduction)
+            </h2>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mb-6 transition-colors">請試著將以下中文翻譯成法文（注意動詞時態與介系詞）：</p>
+            
+            <!-- 💡 所有的題目都會透過 JavaScript 自動生成到這個 div 裡面 -->
+            <div id="translation-quiz-container" class="space-y-10 divide-y divide-slate-100 dark:divide-slate-700/50">
+                <!-- 題目會自動出現在這裡 -->
+            </div>
+        </section>
     </div>
 
     <script>
+        const translationQuestions = [
+            {
+                id: 1,
+                chinese: "他把咖啡打翻在鍵盤上。",
+                hint: "鍵盤:le clavier",
+                answer: "Il a renversé son café sur son clavier."
+            },
+            {
+                id: 2,
+                chinese: "我小時候總是把水杯打翻。",
+                hint: "注意時態，有兩句",
+                answer: "Quand j'étais petit, Je renverais toujours mon verre d'eau"
+            },
+            {
+                id: 3,
+                chinese: "你必須小心，免得把湯打翻。",
+                hint: "subjonctif",
+                answer: "Il faut que tu fasse attention pour que tu ne renveres pas la soupe."
+            },
+            {
+                id: 4,
+                chinese: "如果你走得再快一點，你就會把盤子打翻",
+                hint: "與現在事實相反的情形",
+                answer: "Si tu marchais plus vite, tu renverserais les assiettes."
+            },
+            {
+                id:5,
+                chinese: "別擔心，貓咪不會弄翻這個花瓶",
+                hint: "未來必然或計劃發生的事情",
+                answer: "Ne t'inquiète pas, le chat ne renversera pas ce vase"
+            }
+        ];
+
         // --- 發音功能 ---
         function speakWord(word) {
             if ('speechSynthesis' in window) {
@@ -203,15 +247,19 @@
         }
 
         // --- 測驗檢查功能 ---
-        function checkAnswer(button, choice, isCorrect) {
+        function checkAnswer(button) {
             const container = button.parentElement.parentElement;
             const feedback = container.querySelector('.quiz-feedback');
             const buttons = container.querySelectorAll('button');
             
+            // 從按鈕的 data 屬性取得是否正確（注意：dataset 拿出來的會是字串）
+            const isCorrect = button.dataset.correct === 'true';
+
             // 禁用該題目的所有按鈕
             buttons.forEach(btn => btn.disabled = true);
 
             feedback.classList.remove('hidden');
+            
             if (isCorrect) {
                 button.className = "px-4 py-2 bg-emerald-500 border border-emerald-500 rounded-xl text-sm font-medium text-white transition-colors";
                 feedback.innerHTML = "🎉 太棒了！答對了！因為課本表面是一個「平面」，所以用 sur。";
@@ -221,14 +269,105 @@
                 feedback.innerHTML = "❌ 再想想看，課本表面應該是用哪一個空間介系詞呢？";
                 feedback.className = "quiz-feedback text-sm mt-2 font-medium text-rose-600 dark:text-rose-400";
                 
-                // 把正確的那個按鈕也亮起來提示
+                // 💡 關鍵改動：改用 dataset 判斷，不管按鈕文字變什麼都照樣能亮起來！
                 buttons.forEach(btn => {
-                    if(btn.textContent === 'sur') {
+                    if (btn.dataset.correct === 'true') {
                         btn.className = "px-4 py-2 bg-emerald-100 dark:bg-emerald-900/40 border border-emerald-200 dark:border-emerald-800 rounded-xl text-sm font-medium text-emerald-700 dark:text-emerald-400 transition-colors";
                     }
                 });
             }
         }
+        
+        // --- 中翻法檢查功能 ---
+        function checkMultipleTranslation(index) {
+            const inputEl = document.getElementById(`input-${index}`);
+            const feedbackEl = document.getElementById(`feedback-${index}`);
+            const iconEl = document.getElementById(`icon-${index}`);
+            const messageEl = document.getElementById(`msg-${index}`);
+            
+            const userAnswer = inputEl.value.trim();
+            const correctAnswer = translationQuestions[index].answer;
+
+            if (!userAnswer) {
+                alert("請先輸入您的翻譯答案喔！");
+                return;
+            }
+
+            // 正規化比對（忽略大小寫、句尾點號、多餘空格）
+            const cleanText = (str) => str.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,"").replace(/\s+/g," ").trim();
+
+            feedbackEl.classList.remove('hidden');
+
+            if (cleanText(userAnswer) === cleanText(correctAnswer)) {
+                feedbackEl.className = "mt-4 p-4 rounded-xl border bg-emerald-50 dark:bg-emerald-950/20 border-emerald-100 dark:border-emerald-900/50 transition-all";
+                iconEl.textContent = "🎉";
+                messageEl.textContent = "太厲害了！完全正確！";
+                messageEl.className = "text-sm font-bold text-emerald-700 dark:text-emerald-400 mb-2";
+            } else {
+                feedbackEl.className = "mt-4 p-4 rounded-xl border bg-rose-50 dark:bg-rose-950/20 border-rose-100 dark:border-rose-900/50 transition-all";
+                iconEl.textContent = "💡";
+                messageEl.textContent = "差一點點！比對一下官方標準答案吧：";
+                messageEl.className = "text-sm font-bold text-rose-700 dark:text-rose-400 mb-2";
+            }
+        }
+
+        // --- 初始化翻譯題目 ---
+        function initTranslationQuiz() {
+            const container = document.getElementById('translation-quiz-container');
+            let htmlContent = '';
+
+            translationQuestions.forEach((q, index) => {
+                // 如果不是第一題，加上內邊距（配合 divide-y 做出漂亮的密合分隔線）
+                const paddingClass = index === 0 ? '' : 'pt-8';
+                
+                htmlContent += `
+                    <div class="${paddingClass}">
+                        <div class="bg-indigo-50/50 dark:bg-indigo-950/20 border border-indigo-100/80 dark:border-indigo-900/50 rounded-xl p-4 mb-3">
+                            <p class="text-base font-semibold text-indigo-900 dark:text-indigo-300">
+                                Q${q.id}. 題目：${q.chinese}
+                            </p>
+                            <p class="text-xs text-slate-400 mt-1">${q.hint}</p>
+                        </div>
+                        
+                        <!-- 輸入框與按鈕，帶入 index 讓 JS 知道是哪一題 -->
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <input type="text" id="input-${index}" placeholder="在此輸入法文句子..." 
+                                class="flex-1 px-4 py-2.5 bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:border-transparent dark:text-slate-100 placeholder-slate-400 transition-all"
+                                autocomplete="off">
+                            <button onclick="checkMultipleTranslation(${index})" class="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 text-white text-sm font-medium rounded-xl shadow-sm hover:shadow active:scale-98 transition-all whitespace-nowrap">
+                                檢查答案
+                            </button>
+                        </div>
+
+                        <!-- 每一題專屬的回饋區塊 -->
+                        <div id="feedback-${index}" class="hidden mt-4 p-4 rounded-xl border transition-all">
+                            <div class="flex items-start gap-2">
+                                <span id="icon-${index}" class="text-lg mt-0.5"></span>
+                                <div>
+                                    <p id="msg-${index}" class="text-sm font-bold mb-2"></p>
+                                    <div class="text-sm text-slate-600 dark:text-slate-400 bg-slate-50 dark:bg-slate-900/60 p-3 rounded-lg border border-slate-100 dark:border-slate-800/80">
+                                        <div class="flex items-center gap-2 flex-wrap">
+                                            <span class="font-semibold text-slate-800 dark:text-slate-200">標準答案：</span>
+                                            <span class="italic text-indigo-600 dark:text-indigo-400 font-medium">${q.answer}</span>
+                                            <!-- 發音按鈕直接帶入該題標準答案 -->
+                                            <button onclick="speakWord(\`${q.answer}\`)" class="p-1 rounded-full text-slate-400 hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" title="聽聽看標準讀音">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = htmlContent;
+        }
+    
+        document.addEventListener("DOMContentLoaded", initTranslationQuiz);
     </script>
 </body>
 </html>
